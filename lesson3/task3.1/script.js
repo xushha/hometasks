@@ -6,4 +6,4 @@ let x;
 n=null;
 let bool=10>15;
 let sym=Symbol();
-console.log('Types we have in JS :\n', typeof(num), typeof(str), typeof(bint),typeof(n),typeof(x),typeof(bool), typeof(sym));
+console.log('Types we have in JS :\n', typeof(num),', ', typeof(str),', ',typeof(bint), ', ',typeof(n), ', ', typeof(x), ', ', typeof(bool), ', ', typeof(sym),', ',  typeof(String));
