@@ -47,10 +47,10 @@ switch(task) {
                     icon = ('Do you want to be new Lionel Messi?');
                     break;
                 case 'basketball':
-                    icon = ( 'Do you want to be new Shaquille O Neal');
+                    icon = ( 'Do you want to be new Shaquille O Neal?');
                     break;
                 case 'tennis':
-                    icon = ( 'Do you want to be new Roger Federer');
+                    icon = ( 'Do you want to be new Roger Federer?');
                     break;
                 case null:
                     message = 'your favourite sport';
