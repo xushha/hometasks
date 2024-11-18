@@ -5,17 +5,17 @@ switch(task) {
  //hw task 4.1
   case 1:{
       let name= prompt('What is your name?');
-      typeof(name) === 'string' ? alert(`Hello, ${name}. How are you?`): alert('Please enter your name');
+      alert(`Hello, ${name}. How are you?`);
       break;
   }
   //hw task 4.2
     case 2:{
-        let answer1=false;
-        let answer2=false;
-        sum=(prompt('Please input your three digit number'));
+        let answer1= false;
+        let answer2= false;
+        sum = (prompt('Please input your three digit number'));
         if(sum[0] === sum[1] && sum[1] === sum[2]){
-            let answer1 = true;
-            let answer2 = true;
+            answer1 = true;
+            answer2 = true;
         } else if (sum[0] === sum[1] || sum[1] === sum[2] || sum[2] === sum[0]) {
             answer2 = true;
         }
@@ -30,9 +30,9 @@ switch(task) {
             let userSport = prompt('What is your favourite sport ?');
 
             if (userYear === null){
-                message='year of birth';
+                message = 'year of birth';
             } else if (userCity === null){
-                message='your town'
+                message = 'your town'
             } else if( userCity === 'Kyiv'){
                 userCity = 'Kyiv, the capital of Ukraine';
             } else if( userCity === 'London'){
@@ -44,7 +44,7 @@ switch(task) {
             }
             switch (userSport){
                 case 'football':
-                    icon= ('Do you want to be new Lionel Messi?');
+                    icon = ('Do you want to be new Lionel Messi?');
                     break;
                 case 'basketball':
                     icon = ( 'Do you want to be new Shaquille O Neal');
@@ -92,7 +92,6 @@ switch(task) {
         alert('Please choose the number of the above');
         break;
     }
-
 
 
 }
