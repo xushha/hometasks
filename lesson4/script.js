@@ -10,29 +10,30 @@ switch(task) {
   }
   //hw task 4.2
     case 2:{
-        let answer1= false;
-        let answer2= false;
-        sum = (prompt('Please input your three digit number'));
+        let answer1 = false;
+        let answer2 = false;
+        const sum = (prompt('Please input your three digit number'));
         if(sum[0] === sum[1] && sum[1] === sum[2]){
             answer1 = true;
             answer2 = true;
         } else if (sum[0] === sum[1] || sum[1] === sum[2] || sum[2] === sum[0]) {
             answer2 = true;
         }
-        alert(`Is it true that all numbers are equal? ${answer1}\n ` +`Is it true that we have equal numbers here? ${answer2}`);
+        alert(`Is it true that all numbers are equal? ${answer1}\n ` + `Is it true that we have equal numbers here? ${answer2}`);
         break;
     }
 
    //hw task 4.3
         case 3: {
-            let userYear = prompt('Please input your year of birth');
-            let userCity = prompt('Please input the name of the town you live: ');
-            let userSport = prompt('What is your favourite sport ?');
+            const userYear = prompt('Please input your year of birth');
+            let  userCity = prompt('Please input the name of the town you live: ');
+            const userSport = prompt('What is your favourite sport ?');
 
+            let message;
             if (userYear === null){
-                message = 'year of birth';
+                  message = 'year of birth';
             } else if (userCity === null){
-                message = 'your town'
+                 message = 'your town'
             } else if( userCity === 'Kyiv'){
                 userCity = 'Kyiv, the capital of Ukraine';
             } else if( userCity === 'London'){
@@ -42,6 +43,8 @@ switch(task) {
                 userCity = 'Washington, the capital of USA';
 
             }
+
+            let icon;
             switch (userSport){
                 case 'football':
                     icon = ('Do you want to be new Lionel Messi?');
@@ -61,7 +64,7 @@ switch(task) {
             }
 
             if (userYear === null || userCity === null || userSport === null){
-                alert(`I\`m sad you dont want to share your ${message} with me :(`)
+                alert(`I\`m sad you dont want to share your ${message} with me :(.`);
             }else {
                 alert(`You were born in ${userYear}. You live in ${userCity}. Your favourite sport is ${userSport}.${icon}`);
             }break;
