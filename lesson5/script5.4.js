@@ -7,15 +7,7 @@
 //
 // } console.log(message);
 //
-//task 5.3
-// let N =  Number(prompt('Please input the whole number'));
-// if (Number.isInteger((N)) && N > 0){
-//     for (let i= 1; i <= 100 && i ** 2 <= N ; i++){
-//         console.log(i);
-//     }
-// } else {
-//     alert(' Your input is incorrect')
-// }
+
 // task 5.4
     do {
         const primeNumber = Number (prompt ('Input your number'));
