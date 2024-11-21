@@ -17,19 +17,23 @@
 //     alert(' Your input is incorrect')
 // }
 // task 5.4
-const primeNumber = Number (prompt ('Input your number'));
-if ( primeNumber === 1 || isNaN(primeNumber)) alert('Your input is incorrect. You can use only whole numbers , except 1');
+    do {
+        const primeNumber = Number (prompt ('Input your number'));
+        if ( primeNumber === 1 || primeNumber === 0  || isNaN(primeNumber)) alert('Your input is incorrect. You can use only whole numbers , except 1 and 0');
 
-let k = 0;
-    for (let j = 1; j <= primeNumber; j++){
+        let k = 0;
+        for (let j = 1; j <= primeNumber; j++){
             if (primeNumber % j === 0) {
                 k++;
             }
-    }
+        }
 
-    if (k > 2) {
-     console.log(`So the number ${primeNumber} isn't prime because it has ${k} dividers.`);
-    } else {
-        console.log(` ${primeNumber} is  prime because it has only 2 dividers ( 1 and ${primeNumber})`);
-    }
+        if (k > 2) {
+            alert(`So the number ${primeNumber} isn't prime because it has ${k} dividers.`);
+        } else {
+            alert(` ${primeNumber} is  prime because it has only 2 dividers ( 1 and ${primeNumber})`);
+        }
+
+    } while ( confirm('Do you want to continue?'));
+
 
