@@ -50,8 +50,10 @@ function deleteLetters(string,letters){
     let newLetter = ' ';
     let relevantLetter =' ';
     let outString;
+    let newString = string;
     for (let i = 0; i < letters.length; i++){
-        for (let j = 0; j < string.length; j++ ){
+        let newLetter = '';
+        for (let j = 0; j < newString.length; j++ ){
 
                 if (string.charAt(j) === letters.charAt(i)){
                     continue;
@@ -68,11 +70,13 @@ function deleteLetters(string,letters){
                 }
             newLetter = newLetter + relevantLetter;
 
-        } string = newLetter;
-    } string = newLetter;
-    return string;
+        }string = newLetter;
+        newString = string;
+
+
+
+    }return newString;
 }
 
-
-
 console.log(deleteLetters('hello world', 'ld'));
+
