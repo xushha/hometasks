@@ -1,21 +1,14 @@
 
-function RemoveElement(array, element){
-    let newString=' ';
+function RemoveElement(array, item){
+    let k = 0;
+
     for (let i = 0; i < array.length; i++){
-        if (String(array[i]) !== String(element)){
-            newString = newString + ' ' + array[i];
-        }else {
-            continue;
+        if ( array [i] !== item){
+            array[k] = array[i];
+            k++;
         }
     }
-    let newArray =[];
-    for (let j = 0; j < newArray; j++){
-
-        newArray[j] = newString[j];
-
-    }
-    return newArray;
+    array.length = k;
+    return array;
 }
-
-let haha = [1,5,9,'hello', true];
-console.log(RemoveElement(haha,'hello'));
+console.log(RemoveElement([1,2,3,7,5], 10));
