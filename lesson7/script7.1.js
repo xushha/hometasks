@@ -1,13 +1,22 @@
-let result = 0;
-function Sum(sum){
+function doSum() {
+    let result = 0;
 
-    function addToSum(){
-        result = result + sum;
-        console.log(result);
-    }
-    addToSum();
+    return function(sum) {
+        result += sum;
+        return result;
+    };
 }
-Sum(4);
-Sum(6);
-Sum(10);
-Sum(7);
+
+const sum = doSum();
+const sum2 = doSum();
+
+console.log(sum(4));
+console.log(sum(6));
+console.log(sum(10));
+console.log(sum(7));
+
+console.log(sum2(5));
+console.log(sum2(7));
+console.log(sum2(8));
+console.log(sum2(9));
+
