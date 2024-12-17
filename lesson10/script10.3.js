@@ -12,40 +12,53 @@ function Contact({id,name, phone, email}){
 }
 function Book(contacts) {
     this.contacts = contacts;
-    Book.prototype.find = (name) => {
-        for (let i = 0; i < this.contacts.length; i++){
-            if (contacts[i].name === name){
-                console.log(contacts[i]);
-            }
-        }
-    };
 
-    Book.prototype.add = (contacts) => {
-        this.contacts.push(contacts);
-    };
-
-    Book.prototype.remove = (id) => {
-       if (this.contacts.findIndex(el => el === id)){
-           contacts.splice(id, 1);
-       }
-    };
 }
+Book.prototype.find = function (name) {
+    for (let i = 0; i < this.contacts.length; i++){
+        if (this.contacts[i].name === name){
+            console.log(contacts[i]);
+        }
+    }
+};
 
+Book.prototype.add = function (contacts){
+    this.contacts.push(contacts);
+};
+
+Book.prototype.remove = function (id) {
+    if (this.contacts.findIndex(el => el === id)){
+        contacts.splice(id, 1);
+    }
+};
+const otherContacts = [];
 
 const book = new Book(contacts);
+const otherBook = new Book(otherContacts);
 
 const contact2 = new Contact({
     name: 'Ksu',
-    phone: '0985369408',
-    email: 'chabanenkoksenia3@gmail.com'
+    phone: '09767654748',
+    email: 'ksu@gmail.com',
 });
 const contact3 = new Contact({
     name: 'Bogdan',
-    phone: '0937722448i8',
-    email: 'bestboyfriend@gmail.com'
+    phone: '0936543559',
+    email: 'bogdan@gmail.com'
 });
+const contact4 = new Contact ({
+    name : 'Masha',
+    phone : '08735628782',
+    email : 'masha@gmail.com'
+});
+const contact5 = new Contact ({
+    name : 'Ivan',
+    phone : '0987287282'
+})
+otherBook.add(contact5);
+otherBook.add(contact4);
+otherBook.find('Ivan');
+console.log(otherBook);
 book.add(contact2);
 book.add(contact3);
-// book.find('Ksu');
-book.remove(2);
 console.log(book);
