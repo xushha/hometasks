@@ -1,9 +1,13 @@
+const textBlock = document.getElementById('textBlock');
 const button = document.getElementById('colorChanger');
-const text = document.getElementById('text');
-button.style.backgroundColor = 'pink';
-button.style.color = 'white';
-button.style.padding = '10px 20px';
-button.style.fontSize = '16px';
-const changeColor = function(){
-    text.style.color = 'green';
-}
+
+let clicks = 0;
+button.addEventListener('click', () => {
+    clicks++;
+    if (clicks %2!== 0){
+        textBlock.style.color = 'red';
+    }else {
+        textBlock.style.color = '';
+    }
+
+});
