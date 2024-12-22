@@ -33,11 +33,7 @@ Book.prototype.remove = function (id) {
         contacts.splice(id, 1);
     }
 };
-
-const otherContacts = [];
-
 const book = new Book(contacts);
-const otherBook = new Book(otherContacts);
 
 const contact2 = new Contact({
     name: 'Ksu',
@@ -58,13 +54,10 @@ const contact5 = new Contact({
     name: 'Ivan',
     phone: '0987287282',
 });
-
-otherBook.add(contact5);
-otherBook.add(contact4);
-// otherBook.find('Ivan');
-// console.log(otherBook);
+book.add(contact5);
+book.add(contact4);
 book.add(contact2);
 book.add(contact3);
+book.find('Ivan');
 book.remove(1);
-// console.log(otherBook);
 console.log(book);
