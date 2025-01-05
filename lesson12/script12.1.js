@@ -5,8 +5,18 @@ let link;
 const handleClick = (event) => {
     if (event.target.id === 'button1') {
         link = prompt('Please input your target page');
+        try {
+            new URL(link);
+        } catch (e) {
+            alert('Invalid URL');
+            link = null;
+        }
     } else if (event.target.id === 'button2') {
-        window.location.href = link;
+        if (link) {
+            window.location.href = link;
+        } else {
+            alert('Please enter valid URL');
+        }
     }
 };
 
