@@ -1,0 +1,11 @@
+#container{
+    margin: auto;
+    max-width: 300px;
+
+}
+#toDoList li{
+    margin-bottom: 10px;
+}
+button:not(#addButton) {
+    margin-left: 30px;
+}
