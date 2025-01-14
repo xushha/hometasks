@@ -1,13 +1,14 @@
 const taskInput = document.getElementById('taskInput');
-const addButton  = document.getElementById('addButton');
+const addButton = document.getElementById('addButton');
 const toDoList = document.getElementById('toDoList');
 
 function addDeleteButton(li) {
-    const deleteButton  = document.createElement('button');
+    const deleteButton = document.createElement('button');
     deleteButton.textContent = 'Видалити';
-    // deleteButton.classList.add('deleteBtn');
+    deleteButton.setAttribute('data-action', 'delete');
     li.appendChild(deleteButton);
 }
+
 const tasks = document.querySelectorAll('li');
 for (const li of tasks) {
     addDeleteButton(li);
@@ -16,9 +17,7 @@ for (const li of tasks) {
 function addTask(taskText) {
     const li = document.createElement('li');
     li.textContent = taskText;
-
     addDeleteButton(li);
-
     toDoList.appendChild(li);
 }
 addButton.addEventListener('click', () => {
@@ -30,7 +29,7 @@ addButton.addEventListener('click', () => {
 });
 
 toDoList.addEventListener('click', (event) => {
-    if (event.target.classList.contains('deleteBtn')) {
+    if (event.target.getAttribute('data-action') === 'delete') {
         const task = event.target.parentElement;
         task.remove();
     }
