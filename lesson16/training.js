@@ -50,9 +50,9 @@ let gpaSum = this.assessments.reduce((sum, num) => sum + num, 0);
 let GPA = gpaSum/this.assessments.length;
 console.log(`${averageAttendance} and ${GPA}`);
 if (GPA >= 90 && averageAttendance >= 0.9){
- console.log('Молодець!');
+    return "Молодець!";
 } else {
-    console.log('Редиска!');
+    return "Редиска!";
 }
 }
 
